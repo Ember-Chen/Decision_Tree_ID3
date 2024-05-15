@@ -2,7 +2,6 @@ import java.util.*;
 import java.lang.Math;
 
 public class Utils {
-    
     // 计算数据集的熵 Ent(D)
     public static double getEnt(List<List<String>> dataSet) {
         int dataSetSize = dataSet.size();
@@ -128,7 +127,7 @@ public class Utils {
         // 遍历孩子节点并递归打印
         for (TreeNode node : cur.children) {
             int oldLen = sb.length();
-            sb.append(node.attrVal);
+            sb.append(node.val);
             printTree(node, sb);
             sb.setLength(oldLen); // 回溯
         }

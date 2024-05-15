@@ -21,13 +21,13 @@ public class DecisionTree {
         TreeNode cur = new TreeNode(false, null);
         int bestAttrIndex = Utils.getBestAttrIndex(dataSet);
         Set<String> attrValSet = Utils.getAttrValSet(dataSet, bestAttrIndex);
-        cur.attr = String.valueOf(bestAttrIndex);
+        cur.val = String.valueOf(bestAttrIndex);
 
         // 遍历最佳属性的所有可能取值，递归构建子树
         for (String val : attrValSet) {
             List<List<String>> subDataSet = Utils.splitDataSet(dataSet, bestAttrIndex, val);
             TreeNode node = build(subDataSet);
-            node.attrVal = val;
+            node.val = val;
             cur.children.add(node);
         }
 

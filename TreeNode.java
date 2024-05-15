@@ -1,12 +1,10 @@
 import java.util.*;
 
 class TreeNode {
-    boolean isLeaf;
-    String attr;
-    Object attrVal;
+    String val;
     List<TreeNode> children = new ArrayList<>();
+    boolean isLeaf;
     String label;
-    String path;
 
     public TreeNode(boolean isLeaf, String label) {
         this.isLeaf = isLeaf;
